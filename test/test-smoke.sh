@@ -154,6 +154,7 @@ echo "$certificate_decoded"
 
 echo
 
+# TODO: support CRs
 cm_cert_name=$(kubectl get certificate --output=name | grep $route_name)
 
 cert_yaml=$(kubectl get $cm_cert_name -oyaml)
